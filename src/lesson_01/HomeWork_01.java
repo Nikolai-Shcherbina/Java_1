@@ -16,7 +16,7 @@ package lesson_01;
 
 public class HomeWork_01 {
     // task 1
-    public static float calculates(int a, int b, int c, int d) {
+    private static float calculates(int a, int b, int c, int d) {
         return a * (b + (c / (d + 0.0f)));
     }
 
@@ -24,13 +24,21 @@ public class HomeWork_01 {
     private static boolean checksRange(int a, int b) {
         int sum = a + b;
         if (sum >= 10 && sum <= 20) return true;
-            return false;
+        return false;
+    }
+
+    // task 3
+    private static void checksPositiveNumber(int x) {
+        if (x < 0) {
+            System.out.println("Число: отрицательное.");
+        } else
+            System.out.println("Число: положительное.");
     }
 
     public static void main(String[] args) {
         calculates(2, 7, 10, 3); // task 1
         checksRange(7, 1); // task 2
-
+        checksPositiveNumber(-7); // task 3
 
     }
 }
