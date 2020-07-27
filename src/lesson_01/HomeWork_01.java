@@ -28,8 +28,7 @@ public class HomeWork_01 {
 
     // task 3
     private static boolean checksPositiveNumber(int x) {
-        if (x < 0) return false;
-        else return true;
+        return x >= 0;
     }
 
     // task 4
@@ -39,8 +38,7 @@ public class HomeWork_01 {
 
     // task: 5 Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный
     private static boolean definesLeapYear(int y) {
-        if (y % 4 == 0 || y % 400 == 0 && y % 100 != 0) return true;
-        return false;
+        return y % 4 == 0 || y % 400 == 0 && y % 100 != 0;
     }
 
     public static void main(String[] args) {
