@@ -23,8 +23,7 @@ public class HomeWork_01 {
     // task 2
     private static boolean checksRange(int a, int b) {
         int sum = a + b;
-        if (sum >= 10 && sum <= 20) return true;
-        return false;
+        return sum >= 10 && sum <= 20;
     }
 
     // task 3
@@ -34,11 +33,23 @@ public class HomeWork_01 {
         } else
             System.out.println("Число: положительное.");
     }
+    // task 4
+    public static String printWelcomeMessage(String name){
+        return "Привет, " + name + "!";
+    }
+
+    // task: 5 Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный
+    private static void definesLeapYear(int y){
+        if (y % 4 == 0 || y % 400 == 0 && y % 100 != 0) {
+            System.out.println("год " + y + " високосный");
+        } else System.out.println("год " + y + " не високосный");
+    }
 
     public static void main(String[] args) {
         calculates(2, 7, 10, 3); // task 1
         checksRange(7, 1); // task 2
         checksPositiveNumber(-7); // task 3
-
+        System.out.println(printWelcomeMessage("Nikolai")); //task 4
+        definesLeapYear(2020); // task 5
     }
 }
