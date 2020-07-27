@@ -27,29 +27,27 @@ public class HomeWork_01 {
     }
 
     // task 3
-    private static void checksPositiveNumber(int x) {
-        if (x < 0) {
-            System.out.println("Число: отрицательное.");
-        } else
-            System.out.println("Число: положительное.");
+    private static boolean checksPositiveNumber(int x) {
+        if (x < 0) return false;
+        else return true;
     }
+
     // task 4
-    public static String printWelcomeMessage(String name){
+    public static String printWelcomeMessage(String name) {
         return "Привет, " + name + "!";
     }
 
     // task: 5 Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный
-    private static void definesLeapYear(int y){
-        if (y % 4 == 0 || y % 400 == 0 && y % 100 != 0) {
-            System.out.println("год " + y + " високосный");
-        } else System.out.println("год " + y + " не високосный");
+    private static boolean definesLeapYear(int y) {
+        if (y % 4 == 0 || y % 400 == 0 && y % 100 != 0) return true;
+        return false;
     }
 
     public static void main(String[] args) {
         calculates(2, 7, 10, 3); // task 1
         checksRange(7, 1); // task 2
-        checksPositiveNumber(-7); // task 3
+        System.out.println("Число -7 положительное? - " + checksPositiveNumber(-7)); // task 3
         System.out.println(printWelcomeMessage("Nikolai")); //task 4
-        definesLeapYear(2020); // task 5
+        System.out.println("2020 год високосный? - " + definesLeapYear(2020)); // task 5
     }
 }
