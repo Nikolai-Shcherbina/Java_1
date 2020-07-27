@@ -19,16 +19,18 @@ public class HomeWork_01 {
     public static float calculates(int a, int b, int c, int d) {
         return a * (b + (c / (d + 0.0f)));
     }
+
     // task 2
-    private static boolean checksRange(int a, int b){
+    private static boolean checksRange(int a, int b) {
         int sum = a + b;
-        if (sum >= 10 && sum <=20) {
-            return true;
-        } return false;
+        if (sum >= 10 && sum <= 20) return true;
+            return false;
     }
 
     public static void main(String[] args) {
         calculates(2, 7, 10, 3); // task 1
         checksRange(7, 1); // task 2
+
+
     }
 }
