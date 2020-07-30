@@ -17,16 +17,21 @@ public class HomeWork_02 {
     // task 1
     private static void array(int[] arr1) {
         for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] == 0) {
-                arr1[i] = 1;
-            } else arr1[i] = 0;
+/*            if (arr1[i] == 0) arr1[i] = 1;
+            else arr1[i] = 0;
+        }*/
+            arr1[i] = (arr1[i] == 0) ? 1 : 0;
         }
-        System.out.print(Arrays.toString(arr1));
     }
 
-
     public static void main(String[] args) {
-        int[] arr1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0}; // task 1
-        array(arr1);
+        int[] arr1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        System.out.println(Arrays.toString(arr1));
+        array(arr1);// task 1
+        System.out.println(Arrays.toString(arr1));
+
+
+
+
     }
 }
