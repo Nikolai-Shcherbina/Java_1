@@ -12,7 +12,6 @@ import java.util.Arrays;
  * 6 ** Написать метод, в который передается не пустой одномерный целочисленный массив, метод должен вернуть true если в массиве есть место, в котором сумма левой и правой части массива равны. Примеры: checkBalance([1, 1, 1, 2, 1]) → true, checkBalance ([2, 1, 1, 2, 1]) → false, checkBalance ([10, 1, 2, 3, 4]) → true.
  * 7. **** Написать метод, которому на вход подается одномерный массив и число n (может быть положительным, или отрицательным), при этом метод должен сместить все элементымассива на n позиций. Для усложнения задачи нельзя пользоваться вспомогательными массивами.
  */
-
 public class HomeWork_02 {
     // task 1
     private static void array(int[] arr1) {
@@ -35,7 +34,23 @@ public class HomeWork_02 {
             if(arr3[i] < 6) arr3[i] *= 2;
         }
     }
-
+    // task 4
+    private static int arrayMaxNumber(int[] arr4){
+        int maxNumber = arr4[0];
+        for (int i = 1; i < arr4.length; i++){
+            if(arr4[i] > maxNumber)
+                maxNumber = arr4[i];
+        }
+        return maxNumber;
+    }
+    private static int arrayMinNumber(int[] arr4){
+        int minNumber = arr4[0];
+        for (int i = 1; i < arr4.length; i++){
+            if(arr4[i] < minNumber)
+                minNumber = arr4[i];
+        }
+        return minNumber;
+    }
     public static void main(String[] args) {
         int[] arr1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         System.out.println(Arrays.toString(arr1));
@@ -48,6 +63,10 @@ public class HomeWork_02 {
         System.out.println(Arrays.toString(arr3));
         array3(arr3); // task 3
         System.out.println(Arrays.toString(arr3));
+        int[] arr4 = {-3, 5, 7, 23, 18, -10, 26, 114};
+        System.out.println(arrayMaxNumber(arr4)); // task 4
+        System.out.println(arrayMinNumber(arr4)); // task 4
+        
 
 
     }
