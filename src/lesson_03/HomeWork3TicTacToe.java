@@ -98,17 +98,19 @@ public class HomeWork3TicTacToe {
         // horizontal
         for (int y = 0; y < field.length; y++) {
             for (int x = 0; x < field.length; x++) {
-                if (c == field[x][field.length - 1] && c == field[x][field.length - 2] && c == field[x][field.length - 3])
+                if (c == field[field.length - 1][x] && c == field[field.length - 2][x] && c == field[field.length - 3][x])
                     return true;
             }
         }
         // diagonal
-        for (int i = 0; i < field.length; i++) {
-            if (c == field[i][field.length - 1 - i] && c == field[i][field.length - 1 - i] && c == field[i][field.length - 1 - i])
-                return true;
-            if (c == field[field.length - 1 - i][i] && c == field[field.length - 1 - i][i] && c == field[field.length - 1 - i][i])
-                return true;
-        }
+/*        for (int y = 0; y < field.length; y++) {
+            for (int x = 0; x < field.length; x++) {
+                if (c == field[y][field.length - 1 - x] && c == field[y+1][field.length - 1 - x] && c == field[y+2][field.length - 1 - x])
+                    return true;
+                if (c == field[field.length - 1 - x][y+1] && c == field[field.length - 1 - x][y] && c == field[field.length - 1 - x][y])
+                    return true;
+            }
+        }*/
         return false;
     }
 
