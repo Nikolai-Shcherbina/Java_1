@@ -108,7 +108,7 @@ public class HomeWork3TicTacToe {
             for (int x = 0; x < field.length; x++) {
                 if (field[y][x] == c) {
                     hor++;
-                    if (hor == 3) return true;
+                    if (hor == 3 && (field[x][field.length -1] == c)) return true;
                 }
             }
         }
@@ -118,7 +118,7 @@ public class HomeWork3TicTacToe {
             for (int y = 0; y < field.length; y++) {
                 if (field[x][y] == c) {
                     vert++;
-                    if (vert == 3) return true;
+                    if (vert == 3 && (field[x][field.length -1] == c)) return true;
                 }
             }
         }
