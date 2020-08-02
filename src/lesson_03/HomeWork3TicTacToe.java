@@ -103,14 +103,13 @@ public class HomeWork3TicTacToe {
             }
         }
         // diagonal
-/*        for (int y = 0; y < field.length; y++) {
-            for (int x = 0; x < field.length; x++) {
-                if (c == field[y][field.length - 1 - x] && c == field[y+1][field.length - 1 - x] && c == field[y+2][field.length - 1 - x])
-                    return true;
-                if (c == field[field.length - 1 - x][y+1] && c == field[field.length - 1 - x][y] && c == field[field.length - 1 - x][y])
-                    return true;
-            }
-        }*/
+        int diagjyalOne = 0;
+        int diagjyalTwo = 0;
+        for (int i = 0; i < field.length; i++) {
+            if (field[i][i] == c) diagjyalOne++;
+            if (field[i][field.length - 1 - i] == c) diagjyalTwo++;
+            if(diagjyalOne == field.length || diagjyalTwo == field.length) return true;
+        }
         return false;
     }
 
