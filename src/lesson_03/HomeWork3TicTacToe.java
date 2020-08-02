@@ -88,50 +88,36 @@ public class HomeWork3TicTacToe {
     }
 
     private static boolean checkWin(char c) {
-/*        // hor
-        if (field[0][0] == c && field[0][1] == c && field[0][2] == c) return true;
-        if (field[1][0] == c && field[1][1] == c && field[1][2] == c) return true;
-        if (field[2][0] == c && field[2][1] == c && field[2][2] == c) return true;
-
-        // ver
-        if (field[0][0] == c && field[1][0] == c && field[2][0] == c) return true;
-        if (field[0][1] == c && field[1][1] == c && field[2][1] == c) return true;
-        if (field[0][2] == c && field[1][2] == c && field[2][2] == c) return true;
-
-        // dia
-        if (field[0][0] == c && field[1][1] == c && field[2][2] == c) return true;
-        if (field[0][2] == c && field[1][1] == c && field[2][0] == c) return true;
-        return false;*/
-        // hor
-        int hor = 0;
+        // vertical
         for (int y = 0; y < field.length; y++) {
             for (int x = 0; x < field.length; x++) {
-                if (field[y][x] == c) {
-                    hor++;
-                    if (hor == 3 && (field[x][field.length -1] == c)) return true;
-                }
+                if (c == field[y][field.length - 1] && c == field[y][field.length - 2] && c == field[y][field.length - 3])
+                    return true;
             }
         }
-        // vert
-        int vert = 0;
-        for (int x = 0; x < field.length; x++) {
-            for (int y = 0; y < field.length; y++) {
-                if (field[x][y] == c) {
-                    vert++;
-                    if (vert == 3 && (field[x][field.length -1] == c)) return true;
-                }
+        // horizontal
+        for (int y = 0; y < field.length; y++) {
+            for (int x = 0; x < field.length; x++) {
+                if (c == field[x][field.length - 1] && c == field[x][field.length - 2] && c == field[x][field.length - 3])
+                    return true;
             }
+        }
+        // diagonal
+        for (int i = 0; i < field.length; i++) {
+            if (c == field[i][field.length - 1 - i] && c == field[i][field.length - 1 - i] && c == field[i][field.length - 1 - i])
+                return true;
+            if (c == field[field.length - 1 - i][i] && c == field[field.length - 1 - i][i] && c == field[field.length - 1 - i][i])
+                return true;
         }
         return false;
     }
 
-    //private static char checkArrayField()
 
     public static void main(String[] args) {
-        initField();
-        printField();
         String answer;
         do {
+            initField();
+            printField();
             while (true) {
                 humanTurn();
                 if (checkEndGame(DOT_HUMAN, "Human win!")) break;
