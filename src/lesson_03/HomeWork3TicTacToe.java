@@ -89,17 +89,21 @@ public class HomeWork3TicTacToe {
 
     private static boolean checkWin(char c) {
         // vertical
-        for (int y = 0; y < field.length; y++) {
-            for (int x = 0; x < field.length; x++) {
-                if (c == field[y][field.length - 1] && c == field[y][field.length - 2] && c == field[y][field.length - 3])
-                    return true;
+        int vertical;
+        for (int x = 0; x < field.length; x++) {
+            vertical = 0;
+            for (int y = 0; y < field.length; y++) {
+                if (field[x][y] == c) vertical++;
+                if (vertical == field.length) return true;
             }
         }
         // horizontal
-        for (int y = 0; y < field.length; y++) {
-            for (int x = 0; x < field.length; x++) {
-                if (c == field[field.length - 1][x] && c == field[field.length - 2][x] && c == field[field.length - 3][x])
-                    return true;
+        int horizontal;
+        for (int x = 0; x < field.length; x++) {
+            horizontal = 0;
+            for (int y = 0; y < field.length; y++) {
+                if (field[y][x] == c) horizontal++;
+                if (horizontal == field.length) return true;
             }
         }
         // diagonal
@@ -108,7 +112,7 @@ public class HomeWork3TicTacToe {
         for (int i = 0; i < field.length; i++) {
             if (field[i][i] == c) diagonalOne++;
             if (field[i][field.length - 1 - i] == c) diagonalTwo++;
-            if(diagonalOne == field.length || diagonalTwo == field.length) return true;
+            if (diagonalOne == field.length || diagonalTwo == field.length) return true;
         }
         return false;
     }
