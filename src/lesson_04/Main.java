@@ -1,4 +1,5 @@
 package lesson_04;
+
 /**
  * 1. Создать класс "Сотрудник" с полями: ФИО, зарплата, возраст;
  * 2. Конструктор класса должен заполнять эти поля при создании объекта;
@@ -11,5 +12,14 @@ package lesson_04;
  *    присваивался личный уникальный идентификационный порядковый номер
 * */
 public class Main {
+
+    public static void main(String[] args) {
+        Employee employee1 = new Employee("Ivanov", 55_000.00f, 35);
+        System.out.print("emploee1: " + "surname - " + employee1.getSurname() + " salary - "
+                + employee1.getSalary() + " age - " + employee1.getAge());
+
+
+    }
+
 
 }
