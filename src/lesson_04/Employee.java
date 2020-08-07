@@ -1,9 +1,9 @@
 package lesson_04;
 
 public class Employee {
-    String surname;
-    float salary;
-    int age;
+    private String surname;
+    private float salary;
+    private int age;
 
     Employee(String surname, float salary, int age){
         this.surname = surname;
@@ -12,11 +12,11 @@ public class Employee {
     }
 
     public float getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public String getSurname(){
