@@ -16,9 +16,21 @@ public class Main {
     public static void main(String[] args) {
         Employee employee1 = new Employee("Ivanov", 55_000.00f, 35);
         System.out.print("emploee1: " + "surname - " + employee1.getSurname() + " age - " + employee1.getAge());
+        Employee[] arrayPerson = new Employee[5];
+        arrayPerson[0] = new Employee("Petrov", 35000.00f, 25);
+        arrayPerson[1] = new Employee("Zyulin", 65000.00f, 27);
+        arrayPerson[2] = new Employee("Semenov", 66000.00f, 34);
+        arrayPerson[3] = new Employee("Golubev", 58000.00f, 35);
+        arrayPerson[4] = new Employee("Filyakin", 61000.00f, 32);
+
+
+
+/*        for (int i = 0; i < arrayPerson.length; i++) {
+            arrayPerson[i] = new Employee();
+        }*/
+
+
 
 
     }
-
-
 }
