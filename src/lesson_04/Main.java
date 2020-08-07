@@ -15,8 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         Employee employee1 = new Employee("Ivanov", 55_000.00f, 35);
-        System.out.print("emploee1: " + "surname - " + employee1.getSurname() + " salary - "
-                + employee1.getSalary() + " age - " + employee1.getAge());
+        System.out.print("emploee1: " + "surname - " + employee1.getSurname() + " age - " + employee1.getAge());
 
 
     }
