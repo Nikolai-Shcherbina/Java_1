@@ -6,9 +6,9 @@ public class Animal {
     protected String name;
     protected int age;
     protected String typeAnimal;
-    private int maxRun;
-    private int maxSwim;
-    private float maxJump;
+    private final int maxRun;
+    private final int maxSwim;
+    private final float maxJump;
 
     protected Animal(String name, int age, String typeAnimal,
                      int maxRun, int maxSwim, float maxJump) {
