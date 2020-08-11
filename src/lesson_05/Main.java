@@ -14,12 +14,12 @@ package lesson_05;
 
 public class Main {
     public static void main(String[] args) {
-        Cat cat1 = new Cat("Tom", 3, "Котик");
+        Cat cat1 = new Cat("Tom", 3, "Котик", 200, 0, 2);
         cat1.run(200);
         cat1.jump(10);
         cat1.swim(150);
 
-        Dog dog1 = new Dog("Rex", 5, "Пёсик");
+        Dog dog1 = new Dog("Rex", 5, "Пёсик", 500, 10, 0.5f);
         dog1.run(550);
         dog1.jump(0.3f);
         dog1.swim(10);
