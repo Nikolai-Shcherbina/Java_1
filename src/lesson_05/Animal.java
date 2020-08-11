@@ -16,13 +16,12 @@ public class Animal {
     }
 
     protected void swim(int swim) {
+        if(typeAnimal.equalsIgnoreCase("Котик"))
+            System.out.println(typeAnimal + name + " " + " не умеет плавать ");;
         System.out.println(typeAnimal + " " + name + " Проплыл! " + swim);
     }
 
     protected void jump(float jump) {
-/*        if(typeAnimal instanceof "Котик"){
-
-        }*/
         System.out.println(typeAnimal + " " + name + " Прыгнул! " + jump);
     }
 }
