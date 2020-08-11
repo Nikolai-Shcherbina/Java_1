@@ -7,4 +7,8 @@ public class Cat extends Animal {
         super(name, age, typeAnimal);
     }
 
+    @Override
+    protected void swim(int swim) {
+        System.out.println(typeAnimal + " " + name + " " + " не умеет плавать ");
+    }
 }
