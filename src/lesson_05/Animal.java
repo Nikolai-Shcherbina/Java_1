@@ -1,7 +1,5 @@
 package lesson_05;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 public class Animal {
     protected String name;
     protected int age;
@@ -20,7 +18,6 @@ public class Animal {
         this.maxSwim = maxSwim;
 
     }
-
 
     protected void run(int run) {
         if (run <= maxRun)

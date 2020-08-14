@@ -28,6 +28,8 @@ public class Main {
         try {
             FileOutputStream fos1 = new FileOutputStream("file1.txt");
             FileOutputStream fos2 = new FileOutputStream("file2.txt");
+
+
             fos1.write(generatorLetters(100).getBytes());
             fos1.flush();
             fos1.close();
@@ -40,5 +42,17 @@ public class Main {
             e.printStackTrace();
         }
 
+        try {
+            FileOutputStream fos3 = new FileOutputStream("file3.txt");
+            FileInputStream fis = new FileInputStream("file1.txt");
+            int b;
+            while ((b = fis.read()) != -1)
+                fos3.write((char)b);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
