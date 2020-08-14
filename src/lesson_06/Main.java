@@ -23,8 +23,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-       // OutputStream out;
-       // InputStream in;
+        // OutputStream out;
+        // InputStream in;
         try {
             FileOutputStream fos1 = new FileOutputStream("file1.txt");
             FileOutputStream fos2 = new FileOutputStream("file2.txt");
@@ -43,11 +43,17 @@ public class Main {
         }
 
         try {
+            StringBuilder file = new StringBuilder();
             FileOutputStream fos3 = new FileOutputStream("file3.txt");
             FileInputStream fis = new FileInputStream("file1.txt");
+            FileInputStream fis1 = new FileInputStream("file2.txt");
+
             int b;
+            int f;
             while ((b = fis.read()) != -1)
-                fos3.write((char)b);
+                fos3.write((char) b);
+            while ((f = fis1.read()) != -1)
+                fos3.write((char) f);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
